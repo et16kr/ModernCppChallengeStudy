@@ -7,22 +7,26 @@ using namespace std;
 
 long long int calc( long long int input )
 {
+    long long int max;
     if ( input < 4 )
     {
         return input;
     }
+
+    max = sqrt(input);
 
     if ( input % 2 == 0 )
     {
         input--;
     }
 
-    for( long long int i = 3 ; i <= sqrt(input) ; i += 2 )
+    for( long long int i = 3 ; i <= max ; i += 2 )
     {
         if ( input % i == 0 )
         {
             i = 1; // +2
             input -= 2;
+            max = sqrt(input);
         }
     }
 
