@@ -4,10 +4,10 @@
 
 using namespace std;
 
-long long int calc1(long long int a , long long int b)
+unsigned long long calc1(unsigned long long a , unsigned long long b)
 {
-    long long int res1 = a;
-    long long int res2 = b;
+    unsigned long long res1 = a;
+    unsigned long long res2 = b;
 
     while(res1 != res2 )
     {
@@ -23,9 +23,9 @@ long long int calc1(long long int a , long long int b)
     return res1;
 }
 
-long long int calc2(long long int input1 , long long int input2 )
+unsigned long long calc2(unsigned long long input1 , unsigned long long input2 )
 {
-    long long int res = 1;
+    unsigned long long res = 1;
 
     while(( input1 % 2 == 0 )||
           ( input2 % 2 == 0 ))
@@ -41,7 +41,7 @@ long long int calc2(long long int input1 , long long int input2 )
         }
     }
 
-    for( long long int i = 3 ;
+    for( unsigned long long i = 3 ;
          ( input1 != 1 ) && ( input2 != 1 ) ;
          i += 2 )
     {
@@ -59,22 +59,23 @@ long long int calc2(long long int input1 , long long int input2 )
             }
         }
     }
-    return res;
+    return res * input1 * input2;
 }
 
 
 int main(int argc, char* argv[])
 {
-    long long int input1, input2  ;
+    unsigned long long input1, input2  ;
 
     if ( argc != 3 )
     {
         return -1;
     }
 
-    input1 = atoi(argv[1]);
-    input2 = atoi(argv[2]);
+    input1 = atol(argv[1]);
+    input2 = atol(argv[2]);
 
+    cout << "Result : " << calc1(input1, input2) << endl;
     cout << "Result : " << calc2(input1, input2) << endl;
 
     return 0;

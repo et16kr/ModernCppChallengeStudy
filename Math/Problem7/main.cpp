@@ -5,12 +5,12 @@
 
 using namespace std;
 
-long long int divisorSum( long long int input )
+unsigned long long divisorSum( unsigned long long input )
 {
-    long long int sum = 1;
-    long long int max = sqrt(input) ;
+    unsigned long long sum = 1;
+    unsigned long long max = sqrt(input) ;
 
-    for( long long int i = 2 ; i <= max ; i++ )
+    for( unsigned long long i = 2 ; i <= max ; i++ )
     {
         if( input % i == 0 )
         {
@@ -29,8 +29,8 @@ long long int divisorSum( long long int input )
 
 int main(int argc, char* argv[])
 {
-    long long int i,j ;
-    long long int skip[SKIP_ARR_SIZE]={0,0,0,0,0,0,0};
+    unsigned long long i,j ;
+    unsigned long long skip[SKIP_ARR_SIZE]={0,0,0,0,0,0,0};
 
     for( i = 1 ; i <= END_NUM ; i++ )
     {
