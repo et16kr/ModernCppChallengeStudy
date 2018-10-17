@@ -34,7 +34,7 @@ bool isPrime( unsigned long long input )
 int main(int argc, char* argv[])
 {
     unsigned long long input;
-    unsigned long long skip[3]={0,0,0};
+    unsigned long long primes[3]={0,0,0};
 
     if( argc != 2 )
     {
@@ -53,26 +53,25 @@ int main(int argc, char* argv[])
     {
         input--;
     }
-
-    for( ; input > 3  ; input -= 2 )
+    for( unsigned long long i  = 1 ; i < 7  ; i -= 2 )
     {
-        if( skip[input%3] != input )
+        if ( isPrime(i) == true )
         {
-            if ( isPrime(input) == true )
-            {
-                if ( isPrime(input-6) == true )
-                {
-                    cout << "Result : " << input -6 << ", " << input << endl ;
-                    return 0;
-                }
-                else
-                {
-                    skip[input%3] = input - 6;
-                }
-            }
+            primes[i%3] = i;
         }
     }
-
-    cout << "Result : not found" << endl ;
+    input -= 6;
+    for( unsigned long long i = 7 ; i < input  ; i += 2 )
+    {
+        if ( isPrime(i) == true )
+        {
+            if( primes[i%3] == ( i - 6 ) )
+            {
+                cout << "[ "<<i << ", " << i + 6 << " ]" << endl;
+            }
+            
+            primes[i%3] = i;
+        }
+    }
     return 0;
 }
