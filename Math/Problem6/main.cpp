@@ -27,7 +27,6 @@ long long int divisorSum( long long int input )
 int main(int argc, char* argv[])
 {
     long long int input;
-    long long int skip[3]={0,0,0};
 
     if( argc != 2 )
     {
