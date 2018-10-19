@@ -33,6 +33,6 @@ int main(int argc, char* argv[])
         }
     }
 
-    cout << maxnum << " " << maxcount << endl;
+    cout << maxnum << " " << maxcount << " " << sizeof(unsigned long) << " " << sizeof( unsigned long long) << endl;
     return 0;
 }
