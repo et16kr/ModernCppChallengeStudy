@@ -33,6 +33,6 @@ int main(int argc, char* argv[])
         }
     }
 
-    cout << maxnum << " " << maxcount << " " << endl;
+    cout << maxnum << " " << maxcount << endl;
     return 0;
 }
