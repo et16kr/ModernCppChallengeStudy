@@ -7,8 +7,8 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {    
-    unsigned long long input, max, lst;
-    unsigned long long i = 3 ;
+    unsigned long input, max, lst;
+    unsigned long i = 3 ;
     if( argc != 2 )
     {
         return -1;

@@ -5,9 +5,9 @@
 
 using namespace std;
 
-unsigned long long calc( unsigned long long input )
+unsigned long calc( unsigned long input )
 {
-    unsigned long long max;
+    unsigned long max;
     if ( input < 4 )
     {
         return input;
@@ -20,7 +20,7 @@ unsigned long long calc( unsigned long long input )
         input--;
     }
 
-    for( unsigned long long i = 3 ; i <= max ; i += 2 )
+    for( unsigned long i = 3 ; i <= max ; i += 2 )
     {
         if ( input % i == 0 )
         {
@@ -34,7 +34,7 @@ unsigned long long calc( unsigned long long input )
 }
 int main(int argc, char* argv[])
 {
-    unsigned long long input;
+    unsigned long input;
     if( argc != 2 )
     {
         return -1;

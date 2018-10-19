@@ -56,7 +56,7 @@ int printRoman( int input, int idx )
 
 int main(int argc, char* argv[])
 {
-    unsigned long long input;
+    unsigned long input;
 
     if( argc != 2 )
     {

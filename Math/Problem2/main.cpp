@@ -5,11 +5,11 @@
 
 using namespace std;
 
-unsigned long long gcd1(unsigned long long input1, unsigned long long input2 )
+unsigned long gcd1(unsigned long input1, unsigned long input2 )
 {
-    unsigned long long res = 1 ;
-    unsigned long long i = 3 ;
-    unsigned long long max ;
+    unsigned long res = 1 ;
+    unsigned long i = 3 ;
+    unsigned long max ;
 
     while(( input1 >= 2 ) && ( input1 % 2 == 0 ) &&
           ( input2 >= 2 ) && ( input2 % 2 == 0 ))
@@ -57,9 +57,9 @@ unsigned long long gcd1(unsigned long long input1, unsigned long long input2 )
     return res;
 }
 
-unsigned long long gcd2( unsigned long long input1 , unsigned long long input2 )
+unsigned long gcd2( unsigned long input1 , unsigned long input2 )
 {
-    unsigned long long tmp;
+    unsigned long tmp;
 
     while( input2 )
     {
@@ -72,7 +72,7 @@ unsigned long long gcd2( unsigned long long input1 , unsigned long long input2 )
 
 int main(int argc, char* argv[])
 {
-    unsigned long long input1, input2  ;
+    unsigned long input1, input2  ;
 
     if ( argc != 3 )
     {

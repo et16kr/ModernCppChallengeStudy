@@ -5,7 +5,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    unsigned long long   input, count, maxcount, maxnum;
+    unsigned long   input, count, maxcount, maxnum;
 
     maxcount = 0;
     maxnum = 0;
@@ -33,6 +33,6 @@ int main(int argc, char* argv[])
         }
     }
 
-    cout << maxnum << " " << maxcount << " " << sizeof(unsigned long) << " " << sizeof( unsigned long long) << endl;
+    cout << maxnum << " " << maxcount << " " << endl;
     return 0;
 }

@@ -4,10 +4,10 @@
 
 using namespace std;
 
-unsigned long long calc1(unsigned long long a , unsigned long long b)
+unsigned long calc1(unsigned long a , unsigned long b)
 {
-    unsigned long long res1 = a;
-    unsigned long long res2 = b;
+    unsigned long res1 = a;
+    unsigned long res2 = b;
 
     while(res1 != res2 )
     {
@@ -23,9 +23,9 @@ unsigned long long calc1(unsigned long long a , unsigned long long b)
     return res1;
 }
 
-unsigned long long calc2(unsigned long long input1 , unsigned long long input2 )
+unsigned long calc2(unsigned long input1 , unsigned long input2 )
 {
-    unsigned long long res = 1;
+    unsigned long res = 1;
 
     while(( input1 % 2 == 0 )||
           ( input2 % 2 == 0 ))
@@ -41,7 +41,7 @@ unsigned long long calc2(unsigned long long input1 , unsigned long long input2 )
         }
     }
 
-    for( unsigned long long i = 3 ;
+    for( unsigned long i = 3 ;
          ( input1 != 1 ) && ( input2 != 1 ) ;
          i += 2 )
     {
@@ -65,7 +65,7 @@ unsigned long long calc2(unsigned long long input1 , unsigned long long input2 )
 
 int main(int argc, char* argv[])
 {
-    unsigned long long input1, input2  ;
+    unsigned long input1, input2  ;
 
     if ( argc != 3 )
     {

@@ -3,19 +3,19 @@
 
 using namespace std;
 
-unsigned long long sum1toNum( unsigned long long input )
+unsigned long sum1toNum( unsigned long input )
 {
     return (1 + input) * (input/2) + ((input%2)*(input/2+1));
 }
 
-unsigned long long sumUnderMultiples( unsigned long long max , unsigned long long by)
+unsigned long sumUnderMultiples( unsigned long max , unsigned long by)
 {
     return sum1toNum( max / by ) * by ;
 }
 
 int main(int argc, char* argv[])
 {
-    unsigned long long input,sum;
+    unsigned long input,sum;
 
     if ( argc != 2 )
     {

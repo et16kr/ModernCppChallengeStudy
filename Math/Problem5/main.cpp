@@ -5,9 +5,9 @@
 
 using namespace std;
 
-bool isPrime( unsigned long long input )
+bool isPrime( unsigned long input )
 {
-    unsigned long long max;
+    unsigned long max;
     if ( input < 4 )
     {
         return true;
@@ -20,7 +20,7 @@ bool isPrime( unsigned long long input )
         return false;
     }
 
-    for( unsigned long long i = 3 ; i <= max ; i += 2 )
+    for( unsigned long i = 3 ; i <= max ; i += 2 )
     {
         if ( input % i == 0 )
         {
@@ -33,8 +33,8 @@ bool isPrime( unsigned long long input )
 
 int main(int argc, char* argv[])
 {
-    unsigned long long input;
-    unsigned long long primes[3]={0,0,0};
+    unsigned long input;
+    unsigned long primes[3]={0,0,0};
 
     if( argc != 2 )
     {
@@ -53,7 +53,7 @@ int main(int argc, char* argv[])
     {
         input--;
     }
-    for( unsigned long long i  = 1 ; i < 7  ; i -= 2 )
+    for( unsigned long i  = 1 ; i < 7  ; i -= 2 )
     {
         if ( isPrime(i) == true )
         {
@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
         }
     }
     input -= 6;
-    for( unsigned long long i = 7 ; i < input  ; i += 2 )
+    for( unsigned long i = 7 ; i < input  ; i += 2 )
     {
         if ( isPrime(i) == true )
         {
